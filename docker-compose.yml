@@ -1,0 +1,13 @@
+services:
+  drk-calendar:
+    image: kryptolyser/drk-calendar:latest
+    container_name: drk-calendar
+    restart: unless-stopped
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+    environment:
+      - TZ=Europe/Berlin
+      - TOKEN=change_me
+      - DRK_LOGIN_USERNAME=change_me
+      - DRK_LOGIN_PASSWORD=change_me
