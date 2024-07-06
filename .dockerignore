@@ -1,0 +1,6 @@
+.devcontainer
+.env
+Dockerfile
+.dockerignore
+.gitignore
+db
