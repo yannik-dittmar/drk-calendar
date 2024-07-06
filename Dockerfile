@@ -1,4 +1,5 @@
-# docker build -t kyptolyser-drk-calendar .
+# docker build -t kryptolyser/drk-calendar .
+# docker push kryptolyser/drk-calendar
 
 FROM golang:1.22-bookworm
 

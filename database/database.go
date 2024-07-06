@@ -65,7 +65,7 @@ func (d *Database) InsertEvents(event []Event) error {
 		return err
 	}
 	for _, e := range event {
-		_, err = stmt.Exec(e.Id, e.Start.String(), e.End.String(), e.Location, e.Summary, e.Description)
+		_, err = stmt.Exec(e.Id, e.Start.Format(time.RFC3339), e.End.Format(time.RFC3339), e.Location, e.Summary, e.Description)
 		if err != nil {
 			return err
 		}
