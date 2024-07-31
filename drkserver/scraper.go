@@ -16,7 +16,9 @@ import (
 )
 
 func ScrapeEvents(database *db.Database) {
-	page := rod.New().MustConnect().MustPage("https://login.drkserver.org/")
+	browser := rod.New().MustConnect()
+	defer browser.MustClose()
+	page := browser.MustPage("https://login.drkserver.org/")
 
 	// Login
 	fmt.Println("Logging in...")
